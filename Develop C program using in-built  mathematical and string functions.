@@ -1,0 +1,35 @@
+//Develop C program using in-built 
+mathematical and string functions.
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int main() {
+    double num = 25.0;
+    char str1[50] = "Hello";
+    char str2[50] = " World";
+    char copy[50];
+
+    // Mathematical functions
+    printf("Mathematical Functions:\n");
+    printf("Square root of %.2f = %.2f\n", num, sqrt(num));
+    printf("Power (5^2) = %.2f\n", pow(5, 2));
+    printf("Absolute value of -10 = %.2f\n", fabs(-10.0));
+    printf("Ceiling of 4.3 = %.2f\n", ceil(4.3));
+    printf("Floor of 4.7 = %.2f\n", floor(4.7));
+
+    // String functions
+    printf("\nString Functions:\n");
+    printf("Length of str1 = %zu\n", strlen(str1));
+
+    strcpy(copy, str1);
+    printf("Copied string = %s\n", copy);
+
+    strcat(str1, str2);
+    printf("Concatenated string = %s\n", str1);
+
+    printf("Comparison of str1 and str2 = %d\n",
+           strcmp(str1, str2));
+
+    return 0;
+}
