@@ -1,0 +1,32 @@
+//C Program to Display Addresses and Values of Variables Using Pointers
+
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    float b = 20.5;
+    char c = 'A';
+
+    int *p1 = &a;
+    float *p2 = &b;
+    char *p3 = &c;
+
+    printf("Variable   Value   Address\n");
+
+    printf("a          %d      %p\n", a, (void *)&a);
+    printf("b          %.2f    %p\n", b, (void *)&b);
+    printf("c          %c       %p\n", c, (void *)&c);
+
+    printf("\nUsing Pointers:\n");
+
+    printf("Value of a = %d\n", *p1);
+    printf("Address of a = %p\n", (void *)p1);
+
+    printf("Value of b = %.2f\n", *p2);
+    printf("Address of b = %p\n", (void *)p2);
+
+    printf("Value of c = %c\n", *p3);
+    printf("Address of c = %p\n", (void *)p3);
+
+    return 0;
+}
