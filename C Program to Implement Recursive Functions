@@ -1,0 +1,27 @@
+//C Program to Implement Recursive Functions
+
+#include <stdio.h>
+
+// Recursive function to calculate factorial
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;  // Base condition
+    } else {
+        return n * factorial(n - 1);  // Recursive call
+    }
+}
+
+int main() {
+    int num;
+
+    printf("Enter a non-negative integer: ");
+    scanf("%d", &num);
+
+    if (num < 0 || num > 12) {
+        printf("Please enter a number between 0 and 12.\n");
+    } else {
+        printf("Factorial of %d = %d\n", num, factorial(num));
+    }
+
+    return 0;
+}
